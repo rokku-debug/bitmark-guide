@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bitmark — Guia de Identidade v1.0
-
-Este site descreve identidade e intenção. Não constitui oferta, promessa ou convite financeiro.</title>
+  <title>Bitmark — Guia de Identidade v1.0</title>
   <style>
     :root {
       --purple: #7A1FD0;
@@ -38,9 +36,15 @@ Este site descreve identidade e intenção. Não constitui oferta, promessa ou c
     }
 
     header p {
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       font-size: 1rem;
       opacity: 0.9;
+    }
+
+    header .disclaimer {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
     }
 
     main {
@@ -86,7 +90,9 @@ Este site descreve identidade e intenção. Não constitui oferta, promessa ou c
       color: var(--white);
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -95,6 +101,9 @@ Este site descreve identidade e intenção. Não constitui oferta, promessa ou c
 <header>
   <h1>Bitmark</h1>
   <p>Guia de Identidade v1.0</p>
+  <div class="disclaimer">
+    Este site descreve identidade e intenção. Não constitui oferta, promessa ou convite financeiro.
+  </div>
 </header>
 
 <main>
@@ -114,7 +123,7 @@ Este site descreve identidade e intenção. Não constitui oferta, promessa ou c
 
 <section>
   <h2>Versão Oficial</h2>
-  <p><strong>Primária:</strong> símbolo branco (<code>#FEFEFE</code>) sobre fundo roxo.</p>
+  <p><strong>Primária:</strong> símbolo branco sobre fundo roxo.</p>
   <p><strong>Secundárias:</strong></p>
   <ul>
     <li>Branco sobre preto — uso simbólico</li>
@@ -126,26 +135,26 @@ Este site descreve identidade e intenção. Não constitui oferta, promessa ou c
   <h2>Paleta de Cores</h2>
 
   <div class="color-swatch">
-    <div class="swatch" style="background:#7A1FD0"></div>
+    <div class="swatch" style="background:var(--purple)"></div>
     <div>
       <strong>Bitmark Purple</strong><br>
-      HEX #7A1FD0
+      Cor institucional primária
     </div>
   </div>
 
   <div class="color-swatch">
-    <div class="swatch" style="background:#FEFEFE"></div>
-    <div>
-      <strong>Unit White</strong><br>
-      Branco #FEFEFE — Preto de contraste #1B1717
-    </div>
-  </div>
-
-  <div class="color-swatch">
-    <div class="swatch" style="background:#151113"></div>
+    <div class="swatch" style="background:var(--black-ledger)"></div>
     <div>
       <strong>Ledger Black</strong><br>
-      Preto #151113 — Branco de contraste #FEFEFE
+      Base escura para contraste e fundo
+    </div>
+  </div>
+
+  <div class="color-swatch">
+    <div class="swatch" style="background:var(--white)"></div>
+    <div>
+      <strong>Unit White</strong><br>
+      Base clara para leitura e interfaces
     </div>
   </div>
 </section>
@@ -176,9 +185,7 @@ Este site descreve identidade e intenção. Não constitui oferta, promessa ou c
 </main>
 
 <footer>
-  Bitmark — Guia de Identidade v1.0  
-  
-  Bitmark (BTMK) é um token ERC-20 experimental, sem proposta de utilidade.
+  Bitmark (BTMK) é um token ERC-20 experimental, sem proposta de utilidade.<br>
   Contato: allan.rokku@gmail.com
 </footer>
 
