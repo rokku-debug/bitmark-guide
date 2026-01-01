@@ -147,12 +147,19 @@
       margin: 0 auto 1.5rem;
     }
 
-    .donations img {
-      width: 100%;
+    /* Wrapper com borda arredondada */
+    .donations-image {
       max-width: 640px;
+      margin: 0 auto;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid var(--purple);
+    }
+
+    .donations-image img {
+      width: 100%;
       height: auto;
       display: block;
-      margin: 0 auto;
     }
 
     .donation-addresses {
@@ -225,9 +232,8 @@
         margin-bottom: 1.25rem;
       }
 
-      .donations img {
-        max-width: 100%;
-        border-radius: 6px;
+      .donations-image {
+        border-radius: 12px;
       }
 
       footer br {
@@ -323,10 +329,12 @@
       Elas ajudam a manter o projeto acessível e documentado.
     </p>
 
-    <img
-      src="donations.png"
-      alt="Moedas aceitas para doações: Ethereum, Bitcoin e Bitmark (em breve)"
-    />
+    <div class="donations-image">
+      <img
+        src="donations.png"
+        alt="Moedas aceitas para doações: Ethereum, Bitcoin e Bitmark (em breve)"
+      />
+    </div>
 
     <div class="donation-addresses">
       <div>
