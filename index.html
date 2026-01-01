@@ -45,15 +45,10 @@
       flex-shrink: 0;
     }
 
-    .brand-logo img,
     .brand-logo svg {
       width: 100%;
       height: 100%;
       display: block;
-    }
-
-    .brand-text {
-      text-align: left;
     }
 
     .brand-text h1 {
@@ -85,43 +80,29 @@
     }
 
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
 
     h2 {
       font-size: 1.1rem;
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
       letter-spacing: 0.02em;
     }
 
-    p {
-      margin: 0.75rem 0;
-      font-size: 1rem;
-    }
+    /* ===== Selo oficial ===== */
 
-    ul {
-      padding-left: 1.2rem;
-      margin-top: 0.75rem;
-    }
-
-    li {
-      margin: 0.4rem 0;
-      font-size: 1rem;
-    }
-
-    .color-swatch {
+    .logo-official {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      margin-bottom: 1rem;
+      gap: 1.5rem;
     }
 
-    .swatch {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      margin-right: 1rem;
-      background: var(--purple);
+    .logo-official svg {
+      width: 220px;
+      height: 220px;
+      display: block;
     }
 
     /* ================= FOOTER ================= */
@@ -132,51 +113,19 @@
       text-align: center;
       padding: 1.75rem 1.5rem;
       font-size: 0.75rem;
-      line-height: 1.5;
       opacity: 0.75;
     }
 
     /* ================= RESPONSIVO ================= */
 
     @media (max-width: 768px) {
-
-      header {
-        padding: 3rem 1.5rem;
-      }
-
       .brand {
         flex-direction: column;
-        gap: 0.75rem;
       }
 
-      .brand-logo {
-        width: 64px;
-        height: 64px;
-      }
-
-      .brand-text {
-        text-align: center;
-      }
-
-      .brand-text h1 {
-        font-size: 2rem;
-      }
-
-      .brand-text p {
-        font-size: 0.95rem;
-      }
-
-      main {
-        padding: 3rem 1.5rem;
-      }
-
-      footer {
-        padding: 2.5rem 1.5rem;
-        font-size: 0.8rem;
-      }
-
-      footer br {
-        display: none;
+      .logo-official svg {
+        width: 180px;
+        height: 180px;
       }
     }
   </style>
@@ -187,49 +136,17 @@
 <header>
   <div class="brand">
     <div class="brand-logo">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 32 32"
-        aria-label="Símbolo Bitmark"
-        role="img"
-      >
-        <circle cx="16" cy="16" r="16" fill="#7C3AED"/>
-        <path fill="#FFFFFF" fill-rule="evenodd" d="
-          M13.5 6
-          v20
-          h5.1
+      <!-- Símbolo simples (sem círculo) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Símbolo Bitmark">
+        <path fill="#FFFFFF" d="
+          M13.5 6 v20 h5.1
           c3.4 0 5.9-1.8 5.9-4.8
           c0-2.2-1.4-3.8-3.3-4.4
           c1.6-0.6 2.8-2 2.8-4
           c0-2.9-2.4-4.1-5.6-4.1
-          h-4.9
-          z
-
-          M16.2 9.3
-          h2.6
-          c1.7 0 2.8 0.7 2.8 2.2
-          c0 1.6-1.1 2.4-3 2.4
-          h-2.4
-          z
-
-          M16.2 16.2
-          h2.8
-          c2 0 3.3 0.9 3.3 2.6
-          c0 1.7-1.3 2.6-3.3 2.6
-          h-2.8
-          z
-
-          M12.3 4.5
-          h1.3
-          v23
-          h-1.3
-          z
-
-          M19.4 4.5
-          h1.3
-          v23
-          h-1.3
-          z
+          h-4.9 z
+          M12.3 4.5 h1.3 v23 h-1.3 z
+          M19.4 4.5 h1.3 v23 h-1.3 z
         "/>
       </svg>
     </div>
@@ -251,68 +168,37 @@
     <h2>Símbolo</h2>
     <p>
       O símbolo do Bitmark consiste em um <strong>“B” com cifrão inspirado no símbolo do Bitcoin</strong>,
-      redesenhado com <strong>geometria reta</strong> e aplicado sobre um <strong>campo circular roxo</strong>.
+      redesenhado com geometria reta e aplicado sobre um campo circular roxo.
     </p>
-    <ul>
-      <li>A forma do símbolo nunca deve ser alterada</li>
-      <li>Não utilizar gradientes, sombras ou efeitos</li>
-      <li>Sempre aplicado em cor sólida</li>
-    </ul>
   </section>
 
-  <section>
+  <section class="logo-official">
     <h2>Versão Oficial</h2>
-    <p>
-      <strong>Primária:</strong> símbolo branco sólido sobre fundo roxo institucional.
-      Esta é a versão canônica.
-    </p>
-  </section>
 
-  <section>
-    <h2>Cor Institucional</h2>
-
-    <div class="color-swatch">
-      <div class="swatch"></div>
-      <div>
-        <strong>Bitmark Purple</strong><br />
-        Única cor institucional<br />
-        <code>#7C3AED</code>
-      </div>
-    </div>
+    <!-- Selo circular (como a imagem anexada) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Selo Bitmark">
+      <circle cx="16" cy="16" r="16" fill="#7C3AED"/>
+      <path fill="#FFFFFF" d="
+        M13.5 6 v20 h5.1
+        c3.4 0 5.9-1.8 5.9-4.8
+        c0-2.2-1.4-3.8-3.3-4.4
+        c1.6-0.6 2.8-2 2.8-4
+        c0-2.9-2.4-4.1-5.6-4.1
+        h-4.9 z
+        M12.3 4.5 h1.3 v23 h-1.3 z
+        M19.4 4.5 h1.3 v23 h-1.3 z
+      "/>
+    </svg>
 
     <p>
-      O Bitmark utiliza uma única cor institucional.
-      Tons neutros existem apenas para suporte técnico.
+      Esta é a versão canônica do símbolo: branco sólido sobre campo circular roxo.
     </p>
-  </section>
-
-  <section>
-    <h2>Tipografia</h2>
-    <p>
-      A tipografia oficial do Bitmark é <strong>Inter</strong>.
-    </p>
-    <ul>
-      <li>Regular (400) — texto</li>
-      <li>Medium (500) — subtítulos</li>
-      <li>SemiBold (600) — títulos</li>
-      <li>Bold (700) — números e destaque técnico</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Manifesto</h2>
-    <p>Bitmark não promete.</p>
-    <p>É apenas uma marca.</p>
-    <p>Uma unidade registrada porque alguém decidiu marcar.</p>
-    <p>Valor não é revelação. É insistência.</p>
-    <p><strong>Mark the beat. Take the bit.</strong></p>
   </section>
 
 </main>
 
 <footer>
-  Bitmark (BTMK) é um token ERC-20 experimental, sem proposta de utilidade.<br />
-  Contato: allan.rokku@gmail.com
+  Bitmark (BTMK) é um token ERC-20 experimental, sem proposta de utilidade.
 </footer>
 
 </body>
