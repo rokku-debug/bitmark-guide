@@ -10,12 +10,14 @@
       /* Cor institucional única */
       --purple: #7C3AED;
 
-      /* Neutros técnicos (não identitários) */
+      /* Neutros técnicos */
       --white: #FEFEFE;
       --black-ledger: #151113;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -25,53 +27,89 @@
       line-height: 1.6;
     }
 
+    /* ================= HEADER ================= */
+
     header {
       background: var(--purple);
       color: var(--white);
-      padding: 4rem 2rem;
-      text-align: center;
+      padding: 2.5rem 2rem;
     }
 
-    header h1 {
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .brand-text {
+      text-align: left;
+    }
+
+    .brand-text h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 600;
+      line-height: 1.1;
     }
 
-    header p {
-      margin-top: 0.75rem;
+    .brand-text p {
+      margin: 0.25rem 0 0;
       font-size: 1rem;
       opacity: 0.9;
     }
 
     header .disclaimer {
-      margin-top: 0.75rem;
-      font-size: 0.9rem;
-      opacity: 0.8;
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      opacity: 0.65;
     }
 
+    /* ================= MAIN ================= */
+
     main {
-      max-width: 800px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
     }
 
     section {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
     }
 
-    p, li {
+    p {
+      margin: 0.75rem 0;
       font-size: 1rem;
     }
 
     ul {
       padding-left: 1.2rem;
+      margin-top: 0.75rem;
+    }
+
+    li {
+      margin: 0.4rem 0;
+      font-size: 1rem;
     }
 
     .color-swatch {
@@ -85,17 +123,63 @@
       height: 48px;
       border-radius: 8px;
       margin-right: 1rem;
-      border: 1px solid rgba(0,0,0,0.1);
+      background: var(--purple);
     }
+
+    /* ================= FOOTER ================= */
 
     footer {
       background: var(--black-ledger);
       color: var(--white);
       text-align: center;
-      padding: 2rem;
-      font-size: 0.85rem;
+      padding: 1.75rem 1.5rem;
+      font-size: 0.75rem;
       line-height: 1.5;
-      opacity: 0.9;
+      opacity: 0.75;
+    }
+
+    /* ================= RESPONSIVO ================= */
+
+    @media (max-width: 768px) {
+
+      header {
+        padding: 3rem 1.5rem;
+      }
+
+      .brand {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .brand-logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      .brand-text {
+        text-align: center;
+      }
+
+      .brand-text h1 {
+        font-size: 2rem;
+      }
+
+      .brand-text p {
+        font-size: 0.95rem;
+      }
+
+      main {
+        padding: 3rem 1.5rem;
+      }
+
+      footer {
+        padding: 2.5rem 1.5rem;
+        font-size: 0.8rem;
+      }
+
+      footer br {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -103,8 +187,20 @@
 <body>
 
 <header>
-  <h1>Bitmark</h1>
-  <p>Guia de Identidade v1.0</p>
+  <div class="brand">
+    <div class="brand-logo">
+      <img
+        src="https://raw.githubusercontent.com/rokku-debug/bitmark-32x32/main/bitmark.svg"
+        alt="Símbolo Bitmark"
+      />
+    </div>
+
+    <div class="brand-text">
+      <h1>Bitmark</h1>
+      <p>Guia de Identidade v1.0</p>
+    </div>
+  </div>
+
   <div class="disclaimer">
     Este site descreve identidade e intenção. Não constitui oferta, promessa ou convite financeiro.
   </div>
@@ -112,75 +208,71 @@
 
 <main>
 
-<section>
-  <h2>Símbolo</h2>
-  <p>
-    O símbolo do Bitmark consiste em um <strong>“B” com cifrão inspirado no símbolo do Bitcoin</strong>,
-    redesenhado com <strong>geometria reta</strong> e aplicado sobre um <strong>campo circular roxo</strong>.
-    Ele preserva a legibilidade universal do ícone original, removendo qualquer conotação mística ou promissória.
-  </p>
-  <ul>
-    <li>A forma do símbolo nunca deve ser alterada</li>
-    <li>Não utilizar gradientes, sombras ou efeitos</li>
-    <li>Sempre aplicado em cor sólida</li>
-  </ul>
-</section>
+  <section>
+    <h2>Símbolo</h2>
+    <p>
+      O símbolo do Bitmark consiste em um <strong>“B” com cifrão inspirado no símbolo do Bitcoin</strong>,
+      redesenhado com <strong>geometria reta</strong> e aplicado sobre um <strong>campo circular roxo</strong>.
+    </p>
+    <ul>
+      <li>A forma do símbolo nunca deve ser alterada</li>
+      <li>Não utilizar gradientes, sombras ou efeitos</li>
+      <li>Sempre aplicado em cor sólida</li>
+    </ul>
+  </section>
 
-<section>
-  <h2>Versão Oficial</h2>
-  <p>
-    <strong>Primária:</strong> símbolo branco sólido sobre fundo roxo institucional.
-    Esta é a versão canônica, inspirada na linguagem visual do Bitcoin,
-    porém reinterpretada com identidade própria.
-  </p>
-</section>
+  <section>
+    <h2>Versão Oficial</h2>
+    <p>
+      <strong>Primária:</strong> símbolo branco sólido sobre fundo roxo institucional.
+      Esta é a versão canônica.
+    </p>
+  </section>
 
-<section>
-  <h2>Cor Institucional</h2>
+  <section>
+    <h2>Cor Institucional</h2>
 
-  <div class="color-swatch">
-    <div class="swatch" style="background:var(--purple)"></div>
-    <div>
-      <strong>Bitmark Purple</strong><br>
-      Única cor institucional<br>
-      <code>#7C3AED</code>
+    <div class="color-swatch">
+      <div class="swatch"></div>
+      <div>
+        <strong>Bitmark Purple</strong><br />
+        Única cor institucional<br />
+        <code>#7C3AED</code>
+      </div>
     </div>
-  </div>
 
-  <p>
-    O Bitmark utiliza uma única cor institucional.
-    Tons neutros existem apenas para suporte técnico e legibilidade,
-    não fazem parte da identidade da marca.
-  </p>
-</section>
+    <p>
+      O Bitmark utiliza uma única cor institucional.
+      Tons neutros existem apenas para suporte técnico.
+    </p>
+  </section>
 
-<section>
-  <h2>Tipografia</h2>
-  <p>
-    A tipografia oficial do Bitmark é <strong>Inter</strong>.
-    Ela existe para registrar, não para persuadir.
-  </p>
-  <ul>
-    <li>Regular (400) — texto</li>
-    <li>Medium (500) — subtítulos</li>
-    <li>SemiBold (600) — títulos</li>
-    <li>Bold (700) — números e destaque técnico</li>
-  </ul>
-</section>
+  <section>
+    <h2>Tipografia</h2>
+    <p>
+      A tipografia oficial do Bitmark é <strong>Inter</strong>.
+    </p>
+    <ul>
+      <li>Regular (400) — texto</li>
+      <li>Medium (500) — subtítulos</li>
+      <li>SemiBold (600) — títulos</li>
+      <li>Bold (700) — números e destaque técnico</li>
+    </ul>
+  </section>
 
-<section>
-  <h2>Manifesto</h2>
-  <p>Bitmark não promete.</p>
-  <p>É apenas uma marca.</p>
-  <p>Uma unidade registrada porque alguém decidiu marcar.</p>
-  <p>Valor não é revelação. É insistência.</p>
-  <p><strong>Mark the beat. Take the bit.</strong></p>
-</section>
+  <section>
+    <h2>Manifesto</h2>
+    <p>Bitmark não promete.</p>
+    <p>É apenas uma marca.</p>
+    <p>Uma unidade registrada porque alguém decidiu marcar.</p>
+    <p>Valor não é revelação. É insistência.</p>
+    <p><strong>Mark the beat. Take the bit.</strong></p>
+  </section>
 
 </main>
 
 <footer>
-  Bitmark (BTMK) é um token ERC-20 experimental, sem proposta de utilidade.<br>
+  Bitmark (BTMK) é um token ERC-20 experimental, sem proposta de utilidade.<br />
   Contato: allan.rokku@gmail.com
 </footer>
 
