@@ -7,10 +7,7 @@
 
   <style>
     :root {
-      /* Cor institucional única */
       --purple: #7C3AED;
-
-      /* Neutros técnicos */
       --white: #FEFEFE;
       --black-ledger: #151113;
     }
@@ -48,7 +45,8 @@
       flex-shrink: 0;
     }
 
-    .brand-logo img {
+    .brand-logo img,
+    .brand-logo svg {
       width: 100%;
       height: 100%;
       display: block;
@@ -189,10 +187,51 @@
 <header>
   <div class="brand">
     <div class="brand-logo">
-      <img
-        src="https://raw.githubusercontent.com/rokku-debug/bitmark-32x32/main/bitmark_icon.svg"
-        alt="Símbolo Bitmark"
-      />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        aria-label="Símbolo Bitmark"
+        role="img"
+      >
+        <circle cx="16" cy="16" r="16" fill="#7C3AED"/>
+        <path fill="#FFFFFF" fill-rule="evenodd" d="
+          M13.5 6
+          v20
+          h5.1
+          c3.4 0 5.9-1.8 5.9-4.8
+          c0-2.2-1.4-3.8-3.3-4.4
+          c1.6-0.6 2.8-2 2.8-4
+          c0-2.9-2.4-4.1-5.6-4.1
+          h-4.9
+          z
+
+          M16.2 9.3
+          h2.6
+          c1.7 0 2.8 0.7 2.8 2.2
+          c0 1.6-1.1 2.4-3 2.4
+          h-2.4
+          z
+
+          M16.2 16.2
+          h2.8
+          c2 0 3.3 0.9 3.3 2.6
+          c0 1.7-1.3 2.6-3.3 2.6
+          h-2.8
+          z
+
+          M12.3 4.5
+          h1.3
+          v23
+          h-1.3
+          z
+
+          M19.4 4.5
+          h1.3
+          v23
+          h-1.3
+          z
+        "/>
+      </svg>
     </div>
 
     <div class="brand-text">
