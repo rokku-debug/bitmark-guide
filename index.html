@@ -131,6 +131,60 @@
       font-size: 0.85rem;
     }
 
+    /* ================= DOAÇÕES ================= */
+
+    .donations {
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #E5E7EB;
+      text-align: center;
+    }
+
+    .donations p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 520px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .donations img {
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .donation-addresses {
+      margin-top: 1.75rem;
+      text-align: left;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .donation-addresses div {
+      margin-bottom: 0.75rem;
+    }
+
+    .donation-addresses strong {
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gray);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .donation-addresses code {
+      display: block;
+      padding: 0.6rem 0.7rem;
+      background: #F4F4F5;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      word-break: break-all;
+    }
+
     /* ================= FOOTER ================= */
 
     footer {
@@ -159,6 +213,21 @@
 
       .symbol-wrapper img {
         width: 140px;
+      }
+
+      .donations {
+        margin-top: 3rem;
+        padding-top: 2rem;
+      }
+
+      .donations p {
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .donations img {
+        max-width: 100%;
+        border-radius: 6px;
       }
 
       footer br {
@@ -244,6 +313,32 @@
     <p>Uma unidade registrada porque alguém decidiu marcar.</p>
     <p>Valor não é revelação. É insistência.</p>
     <p><strong>Mark the beat. Take the bit.</strong></p>
+  </section>
+
+  <!-- ================= DOAÇÕES ================= -->
+
+  <section class="donations">
+    <p>
+      Caso este guia tenha sido útil, doações são bem-vindas.
+      Elas ajudam a manter o projeto acessível e documentado.
+    </p>
+
+    <img
+      src="donations.png"
+      alt="Moedas aceitas para doações: Ethereum, Bitcoin e Bitmark (em breve)"
+    />
+
+    <div class="donation-addresses">
+      <div>
+        <strong>Ethereum (ETH)</strong>
+        <code>0xeb256FC3B92828E90458778d89312CA511ACE3bd</code>
+      </div>
+
+      <div>
+        <strong>Bitcoin (BTC)</strong>
+        <code>bc1qh3v5emqfysqcs6ngvxezpe7hrrrgqzdxmnlxj4</code>
+      </div>
+    </div>
   </section>
 
 </main>
