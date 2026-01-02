@@ -1,1 +1,21 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "Bitmark — Guia de Identidade",
+  "short_name": "Bitmark",
+  "start_url": "/bitmark-guide/",
+  "scope": "/bitmark-guide/",
+  "display": "standalone",
+  "theme_color": "#7C3AED",
+  "background_color": "#7C3AED",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
