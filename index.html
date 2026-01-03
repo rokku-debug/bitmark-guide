@@ -148,18 +148,20 @@
 
     .color-name {
       font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
     }
 
     .color-hex {
+      margin-top: 0.25rem;
       font-size: 0.7rem;
-      font-family: ui-monospace, monospace;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       background: var(--bg-soft);
       color: var(--gray);
       padding: 0.15rem 0.45rem;
       border-radius: 999px;
+      width: fit-content;
     }
 
     @media print {
@@ -188,8 +190,8 @@
 }
 
     .header-brand img {
-      width: 24px;
-      height: 24px;
+      width: 28px;
+      height: 28px;
 }
   </style>
 </head>
