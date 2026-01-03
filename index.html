@@ -134,36 +134,17 @@
       margin-top: 4rem;
       padding-top: 2.5rem;
       border-top: 1px solid #E5E7EB;
-      text-align: center;
     }
 
     .donations p {
       font-size: 0.9rem;
       color: var(--gray);
       max-width: 520px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .donations-image {
-      max-width: 640px;
-      margin: 0 auto;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 2px solid var(--purple);
-    }
-
-    .donations-image img {
-      width: 100%;
-      height: auto;
-      display: block;
     }
 
     .donation-addresses {
-      margin-top: 1.75rem;
-      text-align: left;
+      margin-top: 1.5rem;
       max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .donation-addresses div {
@@ -213,14 +194,29 @@
   <section>
     <h2>Sobre o Token</h2>
     <p>
-      Bitmark (BTMK) é um token ERC-20 experimental, implantado na rede Base.
+      Bitmark (BTMK) é um token ERC-20 imutável, implantado na rede Base.
     </p>
     <p>
-      Este site é o guia oficial de identidade e documentação do token Bitmark (BTMK).
+      Endereço do contrato atual:
+      <code>0x4e28B0Dd5571430c9BBE7c1362e14b1833b79A40</code>
     </p>
+  </section>
+
+  <section>
+    <h2>Atualização de Contrato e Mudanças Estruturais</h2>
     <p>
-      Endereço do contrato:
-      <code>0x0x0dEFf30593968aFF4a0a65cacdb4EBEE8de5eB08</code>
+      O Bitmark passou por um primeiro deployment experimental, seguido por um contrato definitivo.
+      A substituição ocorreu exclusivamente por motivos estruturais e de clareza técnica.
+    </p>
+    <ul>
+      <li>Supply total fixo: 50.000.000 BTMK</li>
+      <li>Genesis: 5.000.000 BTMK</li>
+      <li>Reserva técnica: 45.000.000 BTMK</li>
+      <li>Sem mint futuro, burn, pausability ou proxy</li>
+    </ul>
+    <p>
+      Contrato anterior (experimental, descontinuado):
+      <code>0x0dEFf30593968aFF4a0a65cacdb4EBEE8de5eB08</code>
     </p>
   </section>
 
@@ -289,12 +285,8 @@
   <section class="donations">
     <p>
       Caso este guia tenha sido útil, doações são bem-vindas.
-      Elas ajudam a manter o projeto acessível e documentado.
+      Elas ajudam a manter o projeto documentado e acessível, sem qualquer obrigação.
     </p>
-
-    <div class="donations-image">
-      <img src="bitmark-donations.png" alt="Moedas aceitas para doações" />
-    </div>
 
     <div class="donation-addresses">
       <div>
@@ -311,7 +303,7 @@
 </main>
 
 <footer>
-  Bitmark (BTMK) é um token ERC-20 experimental, sem proposta de utilidade.<br />
+  Bitmark (BTMK) é um token ERC-20 imutável, sem proposta de utilidade financeira.<br />
   Este site é o guia oficial do token.<br />
   Contato oficial: bitmark.project@proton.me
 </footer>
