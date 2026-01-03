@@ -87,9 +87,7 @@
       padding: 3.5rem 2rem;
     }
 
-    section {
-      margin-bottom: 3.25rem;
-    }
+    section { margin-bottom: 3.25rem; }
 
     h2 {
       font-size: 0.95rem;
@@ -99,20 +97,10 @@
       margin-bottom: 0.75rem;
     }
 
-    p {
-      margin: 0.75rem 0;
-      font-size: 0.95rem;
-    }
+    p { margin: 0.75rem 0; font-size: 0.95rem; }
 
-    ul {
-      padding-left: 1.1rem;
-      margin-top: 0.75rem;
-    }
-
-    li {
-      margin: 0.35rem 0;
-      font-size: 0.95rem;
-    }
+    ul { padding-left: 1.1rem; margin-top: 0.75rem; }
+    li { margin: 0.35rem 0; font-size: 0.95rem; }
 
     code {
       font-size: 0.85rem;
@@ -123,9 +111,8 @@
       display: inline-block;
     }
 
-    .contract-list {
-      margin-top: 1rem;
-    }
+    [data-lang] { display: none; }
+    [data-lang].active { display: block; }
 
     .contract-row {
       display: flex;
@@ -133,9 +120,7 @@
       margin-bottom: 0.6rem;
     }
 
-    .contract-label {
-      min-width: 230px;
-    }
+    .contract-label { min-width: 230px; }
 
     .contract-row.deprecated {
       color: var(--gray-light);
@@ -143,42 +128,6 @@
 
     .contract-row.deprecated code {
       background: #EFEFF1;
-      color: var(--gray);
-    }
-
-    @media (max-width: 560px) {
-      .contract-row {
-        flex-direction: column;
-        gap: 0.25rem;
-      }
-
-      .contract-label {
-        min-width: unset;
-        font-size: 0.8rem;
-        color: var(--gray);
-      }
-
-      code {
-        font-size: 0.75rem;
-      }
-    }
-
-    [data-lang] { display: none; }
-    [data-lang].active { display: block; }
-
-    .symbol-wrapper {
-      text-align: center;
-      margin: 3rem 0 3.5rem;
-    }
-
-    .symbol-wrapper img {
-      width: 160px;
-      max-width: 65%;
-      margin-bottom: 1.2rem;
-    }
-
-    .symbol-caption {
-      font-size: 0.75rem;
       color: var(--gray);
     }
 
@@ -206,8 +155,7 @@
 
     .color-hex {
       font-size: 0.7rem;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      letter-spacing: 0.02em;
+      font-family: ui-monospace, monospace;
       background: var(--bg-soft);
       color: var(--gray);
       padding: 0.15rem 0.45rem;
@@ -222,12 +170,6 @@
       margin-top: 4rem;
       padding-top: 2.5rem;
       border-top: 1px solid #E5E7EB;
-    }
-
-    .donation-addresses code {
-      display: block;
-      margin-top: 0.25rem;
-      font-size: 0.75rem;
     }
 
     footer {
@@ -268,13 +210,8 @@
 <section>
   <h2 data-lang="en" class="active">About the Token</h2>
   <h2 data-lang="pt">Sobre o Token</h2>
-
-  <p data-lang="en" class="active">
-    Bitmark (BTMK) is an immutable ERC-20 token deployed on the Base network.
-  </p>
-  <p data-lang="pt">
-    Bitmark (BTMK) é um token ERC-20 imutável, implantado na rede Base.
-  </p>
+  <p data-lang="en" class="active">Bitmark (BTMK) is an immutable ERC-20 token deployed on the Base network.</p>
+  <p data-lang="pt">Bitmark (BTMK) é um token ERC-20 imutável, implantado na rede Base.</p>
 </section>
 
 <section>
@@ -295,18 +232,16 @@
     <li>Sem mint futuro, burn, pausability ou proxy</li>
   </ul>
 
-  <div class="contract-list">
-    <div class="contract-row">
-      <span class="contract-label" data-lang="en" class="active">Current contract address:</span>
-      <span class="contract-label" data-lang="pt">Endereço do contrato atual:</span>
-      <code>0x4e28B0Dd5571430c9BBE7c1362e14b1833b79A40</code>
-    </div>
+  <div class="contract-row">
+    <span class="contract-label" data-lang="en" class="active">Current contract address:</span>
+    <span class="contract-label" data-lang="pt">Endereço do contrato atual:</span>
+    <code>0x4e28B0Dd5571430c9BBE7c1362e14b1833b79A40</code>
+  </div>
 
-    <div class="contract-row deprecated">
-      <span class="contract-label" data-lang="en" class="active">Previous contract (discontinued):</span>
-      <span class="contract-label" data-lang="pt">Contrato anterior (descontinuado):</span>
-      <code>0x0dEFf30593968aFF4a0a65cacdb4EBEE8de5eB08</code>
-    </div>
+  <div class="contract-row deprecated">
+    <span class="contract-label" data-lang="en" class="active">Previous contract (discontinued):</span>
+    <span class="contract-label" data-lang="pt">Contrato anterior (descontinuado):</span>
+    <code>0x0dEFf30593968aFF4a0a65cacdb4EBEE8de5eB08</code>
   </div>
 </section>
 
@@ -316,46 +251,72 @@
 
   <div class="color-swatch">
     <div class="swatch"></div>
-    <div>
-      <span class="color-name">
-        Bitmark Purple
-        <span class="color-hex">#7C3AED</span>
-      </span>
-    </div>
+    <span class="color-name">
+      Bitmark Purple <span class="color-hex">#7C3AED</span>
+    </span>
   </div>
-
-  <p data-lang="en" class="active">
-    Bitmark uses a single institutional color. Neutral tones exist only for technical support and legibility.
-  </p>
-  <p data-lang="pt">
-    O Bitmark utiliza uma única cor institucional. Tons neutros existem apenas para suporte técnico e legibilidade.
-  </p>
 </section>
 
 <section>
   <h2 data-lang="en" class="active">Typography</h2>
   <h2 data-lang="pt">Tipografia</h2>
 
-  <p data-lang="en" class="active">
-    Bitmark’s official typeface is <strong>Inter</strong>.
-  </p>
-  <p data-lang="pt">
-    A tipografia oficial do Bitmark é <strong>Inter</strong>.
-  </p>
+  <ul data-lang="en" class="active">
+    <li>Regular (400) — body text</li>
+    <li>Medium (500) — subtitles</li>
+    <li>SemiBold (600) — headings</li>
+    <li>Bold (700) — numbers and technical emphasis</li>
+  </ul>
+
+  <ul data-lang="pt">
+    <li>Regular (400) — texto</li>
+    <li>Medium (500) — subtítulos</li>
+    <li>SemiBold (600) — títulos</li>
+    <li>Bold (700) — números e destaque técnico</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Manifesto</h2>
+
+  <p data-lang="en" class="active">Bitmark does not promise.</p>
+  <p data-lang="pt">Bitmark não promete.</p>
+
+  <p data-lang="en" class="active">It is just a mark.</p>
+  <p data-lang="pt">É apenas uma marca.</p>
+
+  <p data-lang="en" class="active">A registered unit, because someone decided to mark.</p>
+  <p data-lang="pt">Uma unidade registrada porque alguém decidiu marcar.</p>
+
+  <p data-lang="en" class="active">Value is not revelation. It is persistence.</p>
+  <p data-lang="pt">Valor não é revelação. É insistência.</p>
+
+  <p><strong>Mark the beat. Take the bit.</strong></p>
+</section>
+
+<section class="donations">
+  <p data-lang="en" class="active">If this guide has been useful, donations are welcome.</p>
+  <p data-lang="pt">Caso este guia tenha sido útil, doações são bem-vindas.</p>
+
+  <p><strong>Ethereum (ETH)</strong></p>
+  <code>0xeb256FC3B92828E90458778d89312CA511ACE3bd</code>
+
+  <p><strong>Bitcoin (BTC)</strong></p>
+  <code>bc1qyjsjfmmhwsru8cu09az0yjpk7rqdadehnh0stt</code>
 </section>
 
 </main>
 
 <footer>
   <span data-lang="en" class="active">
-    Bitmark (BTMK) is an immutable ERC-20 token with no proposed financial utility.<br />
-    This site is the official token identity guide.<br />
+    Bitmark (BTMK) is an immutable ERC-20 token with no proposed financial utility.<br>
+    This site is the official token identity guide.<br>
     Contact: bitmark.project@proton.me
   </span>
 
   <span data-lang="pt">
-    Bitmark (BTMK) é um token ERC-20 imutável, sem proposta de utilidade financeira.<br />
-    Este site é o guia oficial de identidade do token.<br />
+    Bitmark (BTMK) é um token ERC-20 imutável, sem proposta de utilidade financeira.<br>
+    Este site é o guia oficial de identidade do token.<br>
     Contato: bitmark.project@proton.me
   </span>
 </footer>
@@ -371,8 +332,6 @@
 
     enBtn.classList.toggle("active", lang === "en");
     ptBtn.classList.toggle("active", lang === "pt");
-
-    document.documentElement.lang = lang === "en" ? "en-US" : "pt-BR";
   }
 
   setLang("en");
