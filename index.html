@@ -184,16 +184,34 @@
 
     .color-swatch {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin: 1.25rem 0;
     }
 
     .swatch {
+      margin-top: 0.15rem;
       width: 42px;
       height: 42px;
       border-radius: 8px;
       margin-right: 1rem;
       background: var(--purple);
+    }
+
+    .color-name {
+      font-weight: 600;
+      display: block;
+    }
+
+    .color-hex {
+      display: inline-block;
+      margin-top: 0.25rem;
+      font-size: 0.7rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: 0.02em;
+      background: var(--bg-soft);
+      color: var(--gray);
+      padding: 0.2rem 0.45rem;
+      border-radius: 999px;
     }
 
     .donations {
@@ -337,10 +355,10 @@
   <div class="color-swatch">
     <div class="swatch"></div>
     <div>
-      <strong>Bitmark Purple</strong><br />
+      <span class="color-name">Bitmark Purple</span>
+      <span class="color-hex">#7C3AED</span><br />
       <span data-lang="en" class="active">Single institutional color</span>
-      <span data-lang="pt">Única cor institucional</span><br />
-      <code>#7C3AED</code>
+      <span data-lang="pt">Única cor institucional</span>
     </div>
   </div>
 
