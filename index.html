@@ -189,29 +189,33 @@
     }
 
     .swatch {
-      margin-top: 0.15rem;
       width: 42px;
       height: 42px;
       border-radius: 8px;
       margin-right: 1rem;
       background: var(--purple);
+      margin-top: 0.15rem;
     }
 
     .color-name {
       font-weight: 600;
-      display: block;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .color-hex {
-      display: inline-block;
-      margin-top: 0.25rem;
       font-size: 0.7rem;
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       letter-spacing: 0.02em;
       background: var(--bg-soft);
       color: var(--gray);
-      padding: 0.2rem 0.45rem;
+      padding: 0.15rem 0.45rem;
       border-radius: 999px;
+    }
+
+    @media print {
+      .color-name { gap: 0.35rem; }
     }
 
     .donations {
@@ -246,7 +250,6 @@
   </div>
 
   <h1>Bitmark</h1>
-
   <p data-lang="en" class="active">Identity Guide</p>
   <p data-lang="pt">Guia de Identidade</p>
 
@@ -308,57 +311,16 @@
 </section>
 
 <section>
-  <h2 data-lang="en" class="active">Symbol</h2>
-  <h2 data-lang="pt">Símbolo</h2>
-
-  <p data-lang="en" class="active">
-    The Bitmark symbol is formed by the <strong>Bitcoin “B” letter in vertical orientation</strong>,
-    centered on a <strong>purple circular field</strong>.
-  </p>
-  <p data-lang="pt">
-    O símbolo do Bitmark é formado pela <strong>letra “B” do Bitcoin em orientação vertical</strong>,
-    centralizada sobre um <strong>campo circular roxo</strong>.
-  </p>
-
-  <ul data-lang="en" class="active">
-    <li>The symbol shape must never be altered</li>
-    <li>No gradients, shadows, or effects</li>
-    <li>Always applied in solid color</li>
-  </ul>
-
-  <ul data-lang="pt">
-    <li>A forma do símbolo nunca deve ser alterada</li>
-    <li>Não utilizar gradientes, sombras ou efeitos</li>
-    <li>Sempre aplicado em cor sólida</li>
-  </ul>
-</section>
-
-<section>
-  <h2 data-lang="en" class="active">Official Version</h2>
-  <h2 data-lang="pt">Versão Oficial</h2>
-
-  <div class="symbol-wrapper">
-    <img src="btmk-logo.png" alt="Official Bitmark symbol" />
-    <div class="symbol-caption" data-lang="en" class="active">
-      Canonical symbol version: solid white over a purple circular field.
-    </div>
-    <div class="symbol-caption" data-lang="pt">
-      Versão canônica do símbolo: branco sólido sobre campo circular roxo.
-    </div>
-  </div>
-</section>
-
-<section>
   <h2 data-lang="en" class="active">Institutional Color</h2>
   <h2 data-lang="pt">Cor Institucional</h2>
 
   <div class="color-swatch">
     <div class="swatch"></div>
     <div>
-      <span class="color-name">Bitmark Purple</span>
-      <span class="color-hex">#7C3AED</span><br />
-      <span data-lang="en" class="active">Single institutional color</span>
-      <span data-lang="pt">Única cor institucional</span>
+      <span class="color-name">
+        Bitmark Purple
+        <span class="color-hex">#7C3AED</span>
+      </span>
     </div>
   </div>
 
@@ -375,61 +337,11 @@
   <h2 data-lang="pt">Tipografia</h2>
 
   <p data-lang="en" class="active">
-    Bitmark’s official typeface is <strong>Inter</strong>. It exists to register, not to persuade.
+    Bitmark’s official typeface is <strong>Inter</strong>.
   </p>
   <p data-lang="pt">
-    A tipografia oficial do Bitmark é <strong>Inter</strong>. Ela existe para registrar, não para persuadir.
+    A tipografia oficial do Bitmark é <strong>Inter</strong>.
   </p>
-
-  <ul data-lang="en" class="active">
-    <li>Regular (400) — body text</li>
-    <li>Medium (500) — subtitles</li>
-    <li>SemiBold (600) — headings</li>
-    <li>Bold (700) — numbers and technical emphasis</li>
-  </ul>
-
-  <ul data-lang="pt">
-    <li>Regular (400) — texto</li>
-    <li>Medium (500) — subtítulos</li>
-    <li>SemiBold (600) — títulos</li>
-    <li>Bold (700) — números e destaque técnico</li>
-  </ul>
-</section>
-
-<section>
-  <h2 data-lang="en" class="active">Manifesto</h2>
-  <h2 data-lang="pt">Manifesto</h2>
-
-  <p data-lang="en" class="active">Bitmark does not promise.</p>
-  <p data-lang="pt">Bitmark não promete.</p>
-
-  <p data-lang="en" class="active">It is just a mark.</p>
-  <p data-lang="pt">É apenas uma marca.</p>
-
-  <p data-lang="en" class="active">A registered unit, because someone decided to mark.</p>
-  <p data-lang="pt">Uma unidade registrada porque alguém decidiu marcar.</p>
-
-  <p data-lang="en" class="active">Value is not revelation. It is persistence.</p>
-  <p data-lang="pt">Valor não é revelação. É insistência.</p>
-
-  <p><strong>Mark the beat. Take the bit.</strong></p>
-</section>
-
-<section class="donations">
-  <p data-lang="en" class="active">
-    If this guide has been useful, donations are welcome.
-  </p>
-  <p data-lang="pt">
-    Caso este guia tenha sido útil, doações são bem-vindas.
-  </p>
-
-  <div class="donation-addresses">
-    <p><strong>Ethereum (ETH)</strong></p>
-    <code>0xeb256FC3B92828E90458778d89312CA511ACE3bd</code>
-
-    <p><strong>Bitcoin (BTC)</strong></p>
-    <code>bc1qyjsjfmmhwsru8cu09az0yjpk7rqdadehnh0stt</code>
-  </div>
 </section>
 
 </main>
@@ -464,7 +376,6 @@
   }
 
   setLang("en");
-
   enBtn.onclick = () => setLang("en");
   ptBtn.onclick = () => setLang("pt");
 </script>
